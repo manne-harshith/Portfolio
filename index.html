@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manne Harshith-Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/log1.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>web Developer</p>
+            <h1>Hi,I am <span>Harshith</span><Br> From Hyderabad</h1>
+        </div>
+    </div>
+</div>
+<!----about-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user2a.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>
+                    I am an enthusiastic third-year B.Tech student at Gokaraju Rangaraju Institute of Engineering and Technology with a deep passion for technology. My curiosity drives me to continually explore and learn about emerging tech trends, while my commitment to my goals ensures I stay focused and dedicated to achieving excellence in my field.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')" >Achievement</p>
+                    <p class="tab-links" onclick="opentab('education')" >Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul> 
+                        <li><span>Problem solving skills</span><br>solved over 700+ problems across multiple platforms</li>
+                        <li><span>Web Developement</span><br>Beginner building some basic projects</li>
+                        <li><span>Java programming language</span><br>language used for problem solving</li>
+                        <li><span>C programming language</span><br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul> 
+                        <li><span> NPTEL </span><br>April 2024
+                            Ranked in the top 2% out of 24,000
+                            participants in a Data Analytics course
+                            using Python.</li>
+                        <li><span>Leetcode
+                            </span><br>achieved a rating of
+                            1450+ </li>
+                            <li><span> Industrial Ambassador
+                            </span><br>
+                            I serve as the Industrial Ambassador for the IEEE Geoscience and Remote Sensing Society (GRSS)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul> 
+                        <li><span>Gokaraju Rangaraju Institute of Engineering and Technology</span><br>Bachelor of Technology
+                            in Computer Science  Cum. GPA: 8.58/10 (pursuing) </li>
+                        <li><span>Sri Gayatri Junior College</span><br> SENIOR SECONDARY(XII) Score : 97.4%</li>
+                        <li><span> Nskk High School</span><br>SECONDARY(X) Score : 90%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--- projects-->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.jpeg" alt="work1">
+                <div class="layer">
+                    <h3>Virtual Try On</h3>
+                    <P>•Developed an innovative virtual fitting room application using OpenCV, CVZone, and Flask (web framework), enabling users to try on clothes virtually. This solution enhances customer safety and convenience by eliminating the need for physical changing rooms in stores, significantly reducing time and contact during the shopping experience.</P>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.png" alt="work2">
+                <div class="layer">
+                    <h3>RECIPE BANK</h3>
+                    <P>•Led a collaborative team in developing a webapplication enabling users to
+                        browse over 200 food dishes by ingredients,significantly enhancing intuitive
+                        recipe discovery.</P>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.jpeg" alt="work3">
+                <div class="layer">
+                    <h3> SMART KEY CHAIN</h3>
+                    <P>•Engineered the SmartKeychain,an innovative solution for users prone to
+                        misplacing keys, allowing them to effortlessly locate their keys via smartphone
+                        and reducing key-related stress and anxiety by 50%.</P>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!----contanct-->
+<div id="contact">
+    <div class="container">
+       <div class="row">
+        <div class="contact-left">
+            <h1 class=""sub-title>Contact Me</h1>
+            <p>harshithmanne@gmail.com</p>
+            <p>7093646393</p>
+        </div>
+        <div class="contact-right"></div>
+        <form>
+            <input type="text" name="Name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="Message"rows="6"  placeholder="Your Message"></textarea>
+            <button type="submit">submit</button>
+        </form>
+       </div>
+    </div>
+</div>
+<div class="copyright">
+    <p>Copyright Manne Harshith-Portfolio</p>
+</div>
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+</body>
+</html>
